@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+    /* background-image: url(https://source.unsplash.com/1600x900/?landscape );*/
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+section {
+    text-align: center;
+    padding: 50px;
+    /*  margin-top: 200px;
+    margin-left: 440px;*/
+    background-color: transparent;
+    width: 660px;
+    border-radius: 10px;
+    border: 3px solid #808080;
+}
+
+h5 {
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 500;
+
+}
+
+button {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 25px 5px 25px;
+    font-size: 50px;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+.imgchoices {
+    width: 50px;
+    height: 50px;
+}
+
+#scissors {
+    background-color: #FF4500;
+
+}
+
+#paper {
+    background-color: #0000FF;
+}
+
+#rock {
+    background-color: #00FF7F;
+}
+
+p {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+.player span {
+    color: cornflowerblue;
+}
+
+.machine span {
+    color: crimson;
+}
