@@ -47,7 +47,7 @@ function playTheGame(human, machine) {
         pointMachine.innerHTML = machineScore
     }
 
-    if (humanScore == 5) {
+    if (humanScore == 15) {
         textWinner.innerHTML = "VOCÊ GANHOU!!"
         textWinner.style.color = '#fab842'
     }
