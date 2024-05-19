@@ -3,10 +3,11 @@ let humanScore = 0
 let machineScore = 0
 let pointPlayer = document.querySelector(".scoreplayer")
 let pointMachine = document.querySelector(".scoremachine")
-const colorBorder = document.querySelector("section")
+let colorBorder = document.querySelector("section")
 let textWinner = document.querySelector(".winner")
-let loser = document.querySelector(".defeat")
-
+let btnChoices = document.querySelector(".buttons")
+let btnReset = document.querySelector(".btn-reset")
+let invertval;
 const GAME_OPTION = {
     SCISSORS: 'scissors',
     PAPER: 'paper',
@@ -28,40 +29,51 @@ function playTheGame(human, machine) {
 
     if (human === machine) {
 
-        colorBorder.style.borderColor = 'yellow'
+        colorBorder.style.borderColor = 'yellow';
     }
 
     else if (
         (human == GAME_OPTION.SCISSORS && machine == GAME_OPTION.PAPER) ||
         (human == GAME_OPTION.PAPER && machine == GAME_OPTION.ROCK) ||
         (human == GAME_OPTION.ROCK && machine == GAME_OPTION.SCISSORS)) {
-        colorBorder.style.borderColor = 'green'
-        colorBorder.style.boxshadowColor = 'green'
-        humanScore++
-        pointPlayer.innerHTML = humanScore
+        colorBorder.style.borderColor = 'green';
+        humanScore++;
+        pointPlayer.innerHTML = humanScore;
     }
 
     else {
-        colorBorder.style.borderColor = 'red'
-        machineScore++
-        pointMachine.innerHTML = machineScore
+        colorBorder.style.borderColor = 'red';
+        machineScore++;
+        pointMachine.innerHTML = machineScore;
+
     }
 
     if (humanScore == 15) {
-        textWinner.innerHTML = "VOCÊ GANHOU!!"
-        textWinner.style.color = '#fab842'
+        textWinner.innerHTML = 'VOCÊ GANHOU😁';
+        textWinner.style.color = 'green';
+        btnChoices.style.display = 'none';
+        btnReset.style.display = 'block';
+        textWinner.style.display = "block"
     }
 
     else if (machineScore == 15) {
-        textWinner.innerHTML = "VOCÊ PERDEU!❌"
-        textWinner.style.color = '#'
+        textWinner.innerHTML = 'VOCÊ PERDEU!🥲';
+        textWinner.style.color = 'red';
+        btnChoices.style.display = 'none';
+        btnReset.style.display = 'block';
+        textWinner.style.display = "block";
     }
 
 }
 
-
-
-
-
-
-
+function resetGame() {
+    textWinner.style.display = 'none';  
+    pointMachine.innerHTML = 0;
+    pointPlayer.innerHTML = 0;
+    machineScore = 0;
+    humanScore = 0;
+    colorBorder.style.borderColor = "white";
+    btnChoices.style.display = 'block';
+    btnReset.style.display = 'none';
+    
+}
