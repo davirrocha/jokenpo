@@ -21,13 +21,14 @@ body {
 header {
     position: absolute;
     top: 5px;
+    display: none;
 }
-
 
 img {
     width: 360px;
 
 }
+
 
 section {
     text-align: center;
@@ -37,8 +38,6 @@ section {
     border-radius: 10px;
     border: 3px solid #808080;
 }
-
-
 
 button {
     display: inline-block;
@@ -110,6 +109,7 @@ p {
 
     header {
         top: 0;
+        display: block;
     }
 
     section {
@@ -125,7 +125,7 @@ p {
         height: 77px;
     }
 
-    p{
+    p {
         font-size: 34px;
     }
 
