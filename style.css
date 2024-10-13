@@ -10,7 +10,7 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #000000;
+    background-color: #00000f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,24 +30,41 @@ img {
 
 
 section {
-    text-align: center;
-    padding: 50px;
-    background-color: transparent;
-    width: 660px;
+    width: 50vw;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 10px;
     border: 3px solid #808080;
+    gap: 15px;
+
+    h3 {
+        font-size: 60px;
+        color: #fff;
+    }
+}
+
+.div-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 button {
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 25px 5px 25px;
-    font-size: 50px;
-    border: none;
-    cursor: pointer;
     width: 90px;
     height: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    i {
+        font-size: 65px;
+        font-weight: 500;
+    }
 }
 
 button:hover {
@@ -78,7 +95,7 @@ button:active {
 
 p {
     color: #ffffff;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 400;
     line-height: 60px;
 }

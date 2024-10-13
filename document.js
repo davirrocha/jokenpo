@@ -5,9 +5,10 @@ let pointPlayer = document.querySelector(".scoreplayer")
 let pointMachine = document.querySelector(".scoremachine")
 let colorBorder = document.querySelector("section")
 let textWinner = document.querySelector(".winner")
-let btnChoices = document.querySelector(".buttons")
+let btnChoices = document.querySelector(".div-btn")
 let btnReset = document.querySelector(".btn-reset")
 let invertval;
+
 const GAME_OPTION = {
     SCISSORS: 'scissors',
     PAPER: 'paper',
@@ -29,20 +30,20 @@ function playTheGame(human, machine) {
 
     if (human === machine) {
 
-        colorBorder.style.borderColor = 'yellow';
+        colorBorder.style.borderColor = '#fab842';
     }
 
     else if (
         (human == GAME_OPTION.SCISSORS && machine == GAME_OPTION.PAPER) ||
         (human == GAME_OPTION.PAPER && machine == GAME_OPTION.ROCK) ||
         (human == GAME_OPTION.ROCK && machine == GAME_OPTION.SCISSORS)) {
-        colorBorder.style.borderColor = 'green';
+        colorBorder.style.borderColor = '#245043';
         humanScore++;
         pointPlayer.innerHTML = humanScore;
     }
 
     else {
-        colorBorder.style.borderColor = 'red';
+        colorBorder.style.borderColor = '#f27d78';
         machineScore++;
         pointMachine.innerHTML = machineScore;
 
@@ -50,24 +51,26 @@ function playTheGame(human, machine) {
 
     if (humanScore == 15) {
         textWinner.innerHTML = 'VOCÊ GANHOU😁';
-        textWinner.style.color = 'green';
+        textWinner.style.color = '#245043';
         btnChoices.style.display = 'none';
         btnReset.style.display = 'block';
         textWinner.style.display = "block"
+
     }
 
     else if (machineScore == 15) {
         textWinner.innerHTML = 'VOCÊ PERDEU!🥲';
-        textWinner.style.color = 'red';
+        textWinner.style.color = '#f27d78';
         btnChoices.style.display = 'none';
         btnReset.style.display = 'block';
         textWinner.style.display = "block";
+
     }
 
 }
 
 function resetGame() {
-    textWinner.style.display = 'none';  
+    textWinner.style.display = 'none';
     pointMachine.innerHTML = 0;
     pointPlayer.innerHTML = 0;
     machineScore = 0;
@@ -75,5 +78,6 @@ function resetGame() {
     colorBorder.style.borderColor = "white";
     btnChoices.style.display = 'block';
     btnReset.style.display = 'none';
-    
+
 }
+
