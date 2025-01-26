@@ -31,6 +31,7 @@ function playTheGame(human, machine) {
     if (human === machine) {
 
         colorBorder.style.borderColor = '#fab842';
+
     }
 
     else if (
@@ -40,12 +41,14 @@ function playTheGame(human, machine) {
         colorBorder.style.borderColor = '#245043';
         humanScore++;
         pointPlayer.innerHTML = humanScore;
+
     }
 
     else {
         colorBorder.style.borderColor = '#f27d78';
         machineScore++;
         pointMachine.innerHTML = machineScore;
+
 
     }
 
