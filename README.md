@@ -1,6 +1,6 @@
 # Jokenpô Game
 
-![Imagem do design do projeto](./assets/img-projeto/design-projeto.png) 
+![Design da pagina](./assets/img-projeto/design-projeto.png) 
 
 Esse é um projeto de um jogo de jokenpô, que foi criado utilizando HTML, CSS e JS. Onde o objetivo do game é alcançar a pontuação de 15 pontos antes ds máquina. **[Link do Projeto](https://davirrocha.github.io/jokenpo/)**
 
